@@ -3,9 +3,11 @@ import matplotlib.pyplot as plt
 df = pd.read_csv (r'S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\10 - Aprendizes\5 - Desenvolvimento de Sistemas\Arquivos a serem disponibilizados\exercicioedjalma.csv')
 df.columns=['data']
 lista = df['data'].str.split('/',n=3,expand=True)
+print(df['data'])
 df['dia'] = lista[0]
 df['mes'] = lista[1]
 df['ano'] = lista[2]
+
 
 print("O que você deseja fazer? ")
 print("[1] gráfico de dia")
